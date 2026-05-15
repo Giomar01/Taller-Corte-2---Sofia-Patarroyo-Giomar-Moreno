@@ -1,5 +1,5 @@
-#ifndef Estudiante.h
-#define Estudiante.h
+#ifndef ESTUDIANTE_H
+#define ESTUDIANTE_H
 
 #include "Persona.h"
 /**
