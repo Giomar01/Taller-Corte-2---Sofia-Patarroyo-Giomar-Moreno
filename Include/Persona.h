@@ -1,5 +1,5 @@
-#ifndef Persona.h
-#define Persona.h
+#ifndef PERSONA_H
+#define PERSONA_H
 
 #include <iostream>
 #include <string>
