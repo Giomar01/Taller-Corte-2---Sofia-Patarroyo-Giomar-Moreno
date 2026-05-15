@@ -1,5 +1,5 @@
-#ifndef Profesor.h
-#define Profesor.h
+#ifndef PROFESOR_H
+#define PROFESOR_H
 
 #include "Persona.h"
 
