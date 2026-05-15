@@ -13,22 +13,34 @@
     
     private:
     std::string Name, Surname;
-    int Age, CC;
+    int Age, Document;
 
     public:
     
-    Person (std::string Name, std::string Surname, int Age, int CC){
+    Person (std::string Name, std::string Surname, int Age, int Document){
         this->Name=Name;
         this->Surname==Surname;
         this->Age=Age;
-        this->CC=CC;
+        this->Document=Document;
     }
 
     virtual ~Person();
 
     std::string getname(){
-        return this->
+        return this->Name;
     }
+    std::string getSurname(){
+        return this->Surname;
+    }
+    int getAge(){
+        return this->Age;
+    }
+    int getDocument(){
+        return this->Document;
+    }
+
+
+    virtual void mostrarInformacion() =0;
 
  };
 
