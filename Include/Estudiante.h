@@ -3,5 +3,11 @@
 
 #include "Persona.h"
 
-class Student : public Person
+class Student : public Person{
+
+    private:
+    int Code;
+    int semester;
+    double Average;
+};
 #endif
