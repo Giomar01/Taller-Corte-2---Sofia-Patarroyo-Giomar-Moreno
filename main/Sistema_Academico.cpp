@@ -1,8 +1,8 @@
 #include <iostream>
-#include "include/Estudiante.h"
-#include "include/Profesor.h"
-#include "include/Curso.h"
-#include "include/Matricula.h"
+#include "Estudiante.h"
+#include "Profesor.h"
+#include "Curso.h"
+#include "Matricula.h"
 
 int main (){
     int opcion;
