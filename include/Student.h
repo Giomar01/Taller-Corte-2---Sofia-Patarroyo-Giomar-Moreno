@@ -1,7 +1,7 @@
-#ifndef ESTUDIANTE_H
-#define ESTUDIANTE_H
+#ifndef STUDENT_H
+#define STUDENT_H
 
-#include "Persona.h"
+#include "Person.h"
 /**
  * @class clase estudiante derivada de persona.
  * @brief
@@ -16,7 +16,7 @@ class Student : public Person{
     public:
 
     // Constructor
-    Student (std::string Name, std::string Surname, int Age, int Document, int Code, int Semester, double Average);
+    Student (std::string Name, std::string Lastname, int Age, int Document, int Code, int Semester, double Average);
     
     /**
      * @brief Obtiene el numero de codigo

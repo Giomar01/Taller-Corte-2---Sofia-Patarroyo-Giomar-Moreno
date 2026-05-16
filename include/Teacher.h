@@ -1,7 +1,7 @@
-#ifndef PROFESOR_H
-#define PROFESOR_H
+#ifndef TEACHER_H
+#define TEACHER_H
 
-#include "Persona.h"
+#include "Person.h"
 
 /**
  * @class Profesor

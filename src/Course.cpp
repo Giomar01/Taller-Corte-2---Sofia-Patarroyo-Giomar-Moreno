@@ -1,4 +1,4 @@
-#include "../include/Curso.h"
+#include "../include/Course.h"
 
 Course::Course(int coursecode,std::string coursename, int credits){
 

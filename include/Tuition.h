@@ -1,10 +1,10 @@
-#ifndef MATRICULA_H
-#define MATRICULA_H
+#ifndef TUITION_H
+#define TUITION_H
 
 #include <iostream>
 #include <string>
-#include "Estudiante.h"
-#include "Curso.h"
+#include "Student.h"
+#include "Course.h"
 
 class Tuition{
 

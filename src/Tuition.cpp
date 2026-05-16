@@ -1,4 +1,4 @@
-#include "../include/Matricula.h"
+#include "../include/Tuition.h"
 
 Tuition::Tuition(Student* student,Course* course){
     this->student = student;

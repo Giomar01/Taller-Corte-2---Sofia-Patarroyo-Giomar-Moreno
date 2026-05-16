@@ -1,17 +1,19 @@
 #include <iostream>
-#include "Estudiante.h"
-#include "Profesor.h"
-#include "Curso.h"
-#include "Matricula.h"
+#include "../include/Student.h"
+#include "../include/Teacher.h"
+#include "../include/Course.h"
+#include "../include/Tuition.h"
+
 
 int main (){
+    
     int opcion;
     const int MAX = 50;
 
-    Student* Students[MAX];
-    Teacher* Teachers[MAX];
-    Course* Courses[MAX];
-    Tuition* Tuitions[MAX];
+    Student* students[MAX]={nullptr};
+    Teacher* teachers[MAX]={nullptr};
+    Course* courses[MAX]={nullptr};
+    Tuition* tuitions[MAX]={nullptr};
 
     int estudianteCount = 0;
     int profesorCount = 0;
@@ -30,7 +32,7 @@ int main (){
         std::cout << "9. Salir\n";
         std::cout << "Opcion: ";
         std::cin >> opcion;
-
+        
         switch(opcion) {
             case 1: {
                 std::string Name, Lastname;
@@ -52,10 +54,11 @@ int main (){
             std::cout << "Promedio: ";
             std::cin >> Average;
 
-            Students[estudianteCount] =
+            students[estudianteCount] =
                 new Student(Name, Lastname, Age, Document, Code, Semester, Average);
 
             estudianteCount++;
+            std::cout << "Count estudiantes: " << estudianteCount << "\n";
                 break;
             }
             case 2:{
@@ -77,7 +80,7 @@ int main (){
             std::cout << "Salario: ";
             std::cin >> Salary;
 
-            Teachers[profesorCount] =
+            teachers[profesorCount] =
                 new Teacher(Name, Lastname, Age, Document, Specialty, Salary);
 
             profesorCount++;
@@ -96,7 +99,7 @@ int main (){
             std::cout << "Creditos: ";
             std::cin >> Credits;
 
-            Courses[cursoCount] = new Course(Code, Name, Credits);
+            courses[cursoCount] = new Course(Code, Name, Credits);
 
             cursoCount++;
             break;
@@ -105,7 +108,7 @@ int main (){
 
             if (estudianteCount == 0 || cursoCount == 0) {
                 std::cout << "No hay estudiantes o cursos registrados.\n";
-                continue;
+                break;
             }
 
             int estIndex, curIndex;
@@ -116,23 +119,26 @@ int main (){
             std::cout << "Indice curso (0 - " << cursoCount - 1 << "): ";
             std::cin >> curIndex;
 
-            Tuitions[matriculaCount] =
-                new Tuition(Students[estIndex], Courses[curIndex]);
+            tuitions[matriculaCount] =
+                new Tuition(students[estIndex], courses[curIndex]);
 
             matriculaCount++;
             break;
             }
             case 5:{
+                 
+
+            std::cout << "Count: " << estudianteCount << "\n";
             for (int i = 0; i < estudianteCount; i++) {
             std::cout << "\n[" << i << "] ";
-            Students[i]->mostrarInformacion();
+            students[i]->mostrarInformacion();
             }
              break;
             }
              case 6: {
             for (int i = 0; i < profesorCount; i++) {
                 std::cout << "\n[" << i << "] ";
-                Teachers[i]->mostrarInformacion();
+                teachers[i]->mostrarInformacion();
             }
             break;
             }
@@ -140,7 +146,7 @@ int main (){
             case 7: {
             for (int i = 0; i < cursoCount; i++) {
                 std::cout << "\n[" << i << "] ";
-                Courses[i]->mostrarInformacion();
+                courses[i]->mostrarInformacion();
             }
             break;
             }
@@ -148,7 +154,7 @@ int main (){
             case 8: {
             for (int i = 0; i < matriculaCount; i++) {
                 std::cout << "\n[" << i << "] ";
-                Tuitions[i]->mostrarInformacion();
+                tuitions[i]->mostrarInformacion();
             }
             break;
             }

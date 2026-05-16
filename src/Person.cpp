@@ -1,4 +1,4 @@
-#include "../include/Persona.h"
+#include "../include/Person.h"
 
 Person::Person(std::string Name, std::string Lastname, int Age, int Document) {
     this->Name = Name;
@@ -28,14 +28,14 @@ void Person::setDocument(int Document){
 //Getters
 
 std::string Person::getname(){
-    return Name=Name;
+    return Name;
 }
 std::string Person::getLastname(){
-    return Lastname=Lastname;
+    return Lastname;
 }
 int Person::getAge(){
-    return Age=Age;
+    return Age;
 }
 int Person::getDocument(){
-    return Document=Document;
+    return Document;
 }

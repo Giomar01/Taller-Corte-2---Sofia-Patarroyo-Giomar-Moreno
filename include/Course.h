@@ -1,10 +1,10 @@
-#ifndef CURSO_H
-#define CURSO_H
+#ifndef COURSE_H
+#define COURSE_H
 
 #include <iostream>
 #include <string>
-#include "Estudiante.h"
-#include "Profesor.h"
+#include "Student.h"
+#include "Teacher.h"
 /**
  * @class Curso
  * @brief Clase que representa un curso academico

@@ -1,4 +1,5 @@
-#include "../include/Profesor.h"
+#include "../include/Teacher.h"
+
 
 //constructor
 Teacher::Teacher(std::string Name, std::string Lastname,int Age, int Document, std::string Specialty, double Salary)

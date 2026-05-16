@@ -1,4 +1,4 @@
-#include "../include/Estudiante.h"
+#include "../include/Student.h"
 
 // Constructor
 
