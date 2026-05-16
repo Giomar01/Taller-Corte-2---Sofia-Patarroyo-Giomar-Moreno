@@ -6,6 +6,17 @@
 
 int main (){
     int opcion;
+    const int MAX = 50;
+
+    Student* Students[MAX];
+    Teacher* Teachers[MAX];
+    Course* Courses[MAX];
+    Tuition* Tuitions[MAX];
+
+    int estudianteCount = 0;
+    int profesorCount = 0;
+    int cursoCount = 0;
+    int matriculaCount = 0;
     do {
         std::cout << "\n===== SISTEMA ACADEMICO =====\n";
         std::cout << "1. Registrar estudiante\n";
@@ -22,7 +33,29 @@ int main (){
 
         switch(opcion) {
             case 1:
-                
+                std::string Name, Lastname, Code;
+            int Age, Document, Semester;
+            double Average;
+
+            std::cout << "Nombre: ";
+            std::cin >> Name;
+            std::cout << "Apellido: ";
+            std::cin >> Lastname;
+            std::cout << "Edad: ";
+            std::cin >> Age;
+            std::cout << "Documento: ";
+            std::cin >> Document;
+            std::cout << "Codigo: ";
+            std::cin >> Code;
+            std::cout << "Semestre: ";
+            std::cin >> Semester;
+            std::cout << "Promedio: ";
+            std::cin >> Average;
+
+            Students[estudianteCount] =
+                new (name, lastname, age, document, code, semester, average);
+
+            estudianteCount++;
                 break;
             case 2:
                 
