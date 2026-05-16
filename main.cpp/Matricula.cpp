@@ -33,3 +33,18 @@ void Tuition::setState(std::string State){
 void Tuition::setFinalnote(double FinalNote){
     this->FinalNote = FinalNote;
 }
+void Tuition::mostrarInformacion(){
+
+    std::cout << "\n INFORMACION DE MATRICULA" << std::endl;
+
+    std::cout << "Estado: " << State << std::endl;
+    std::cout << "Nota final: " << FinalNote << std::endl;
+
+    std::cout << "\n ESTUDIANTE" << std::endl;
+
+    student->mostrarInformacion();
+
+    std::cout << "\n CURSO" << std::endl;
+
+    course->mostrarInformacion();
+}
